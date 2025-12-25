@@ -1,0 +1,20 @@
+# Feed Generator Default Configuration
+
+redis:
+  host: localhost
+  port: 6379
+  password: ""
+  db: 0
+
+generate:
+  tps: 100                    # Trades per second
+  duration: 5m                # How long to generate (0 = infinite)
+  fraud_rate: 0.05            # 5% fraud injection rate
+  fraud_type: ALL             # ALL, WASH, VELOCITY, ANOMALY
+  verbose: false              # Print each trade
+  stats_interval: 10s         # How often to print statistics
+
+profiles:
+  hft_ratio: 0.20             # High-frequency traders (20% of users, 80% of volume)
+  regular_ratio: 0.70         # Regular traders (70% of users, 18% of volume)
+  casual_ratio: 0.10          # Casual traders (10% of users, 2% of volume)
